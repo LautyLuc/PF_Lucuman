@@ -652,24 +652,15 @@ main.py-5 {
   }
 
   .contacto-main {
-    width: 99vw;
-    margin: 2rem auto;
-    padding: 0.5rem 0.1rem;
-  }
-  .contacto-form {
-    padding: 0.8rem 0.1rem;
-    max-width: 98vw;
+    margin: 9rem auto 1rem;
+    padding: 0.5rem;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
   }
   .img-contacto {
     max-width: 120px;
     width: 60vw;
-  }
-
-  .contacto-main{
-    margin: 9rem 2rem 1rem 2rem;
-    padding: 0.5rem 0.1rem;
-    width: 400px;
-    height: auto;
   }
 
   .contacto-item{
