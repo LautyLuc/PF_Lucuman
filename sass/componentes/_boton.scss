@@ -1,23 +1,13 @@
 @use 'sass:map';
 @use '../base/maps';
+@use '../base/extends' as *;
 
 .btn {
-    margin-top: 2rem;
-    padding: 0.5rem 1.5rem;
-    font-size: 1.2rem;
+    @extend %boton-base;
     background-color: map.get(maps.$colores, color-dos);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-  
-
-  .btn:hover {
-    background-color: map.get(maps.$colores, color-tres);
-    color: map.get(maps.$colores, color-uno);
-    transition: all 0.6s ease;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
+    
+    &:hover {
+        background-color: map.get(maps.$colores, color-tres);
+        color: map.get(maps.$colores, color-uno);
+    } 
+}

@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '../base/maps';
-
+@use '../base/mixins' as *;
 footer p {
   color: map.get(maps.$colores, color-tres);
   padding: 1rem;
@@ -11,8 +11,7 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
+  width: 100%; 
   margin: 0 auto;
   padding: 0 2rem;
   box-sizing: border-box;
@@ -25,7 +24,7 @@ header {
   width: 100%;
   padding: 1.5rem 0;
   background-color: transparent;
-  z-index: 100;
+  z-index: 100; 
   box-sizing: border-box;
 
   .nav-menu {
@@ -55,7 +54,7 @@ header {
     letter-spacing: 1px;
     background-color: transparent;
     border: 2px solid #fff;
-    color: #fff;
+    color: #fff;  
 
     &:hover {
       background-color: map.get(maps.$colores, color-tres);
@@ -78,18 +77,43 @@ section {
   justify-content: center;
   padding-top: 0;
 }
+  
+html {
+  height: 100%;
+}
 
-footer {
+body {
+  min-height: 100vh;       
+  display: flex; 
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  bottom: 0;
-  left: 0;
+}
+main {
+  @include gradient-background(map.get(maps.$colores, color-uno), #669264, to bottom);
+  flex: 1 0 auto;
+  width: 100%; 
+}
+
+footer {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: auto;
+  padding: 1.5rem 1rem;
+  background-color: #669264;
+  color: white;
   text-align: center;
-  background-color: rgb(102, 146, 100);
-  text-decoration: none;
   text-transform: uppercase;
+  box-sizing: border-box;
+  margin-top: auto;
+
+  .footer-container { 
+    max-width: 90%; 
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 footer a {

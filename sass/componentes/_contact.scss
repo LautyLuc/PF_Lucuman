@@ -1,0 +1,167 @@
+@use "sass:map";
+@use "../base/maps";
+
+.contacto-main{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+}
+
+.contacto-item{
+    display: flex;
+    flex-direction: row; 
+    background: map.get(maps.$colores, color-tres);  
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contacto-item aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.map{
+    width: 90%;
+}
+
+.img-contacto{
+    width: 370px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 6px solid map.get(maps.$colores, color-dos);
+}
+
+.contacto-form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 2.5rem 2rem;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 32px 2px rgba(110, 136, 61, 0.09),
+    0 1.5px 8px rgba(202, 151, 43, 0.07);
+    max-width: 400px;
+    width: 100%;
+}
+
+.contacto-form label{   
+    font-size: 1.08rem;
+    color: map.get(maps.$colores, color-uno);
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    font-size: 1.05rem;
+    padding: 0.7rem 1rem;
+    border: 1.8px solid map.get(maps.$colores, color-dos);
+    border-radius: 10px;
+    margin-bottom: 0.2rem;
+    background: #f8f8f8;
+    outline: none;
+    resize: none;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border: 2px solid map.get(maps.$colores, color-uno);
+    box-shadow: 0 0 0 2px #e9d3b8aa;
+    background: #fff;
+}
+
+.contacto-form textarea { 
+    min-height: 90px;
+    max-height: 220px;
+}
+
+// Media Queries para diseño responsivo
+
+// Tablet (hasta 768px)
+@media (max-width: 768px) {
+    .contacto-main {
+        width: 90%;
+        margin: 5rem auto;
+        padding: 1.2rem 0;
+        border-radius: 20px;
+    }
+
+    .contacto-item {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .contacto-item aside {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .map {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .img-contacto {
+        width: 280px;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    .contacto-form {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+}
+
+// Móvil (hasta 480px)
+@media (max-width: 480px) {
+    .contacto-main {
+        width: 95%;
+        margin: 5rem auto;
+        border-radius: 16px;
+    }
+
+    .contacto-item {
+        padding: 1rem;
+        gap: 1.2rem;
+    }
+
+    .img-contacto {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+    }
+
+    .contacto-form {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+        
+        input, textarea {
+            padding: 0.6rem 0.9rem;
+            font-size: 1rem;
+        }
+        
+        label {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+

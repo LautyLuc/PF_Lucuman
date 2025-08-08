@@ -1,0 +1,130 @@
+@use "sass:map";
+@use "../base/maps";
+
+.servicios-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem; 
+}
+
+.servicios-title{ 
+    font-size: 2.8rem; 
+    color: map.get(maps.$colores, color-dos);
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.servicios-container{
+    display: grid;
+    place-items:center; 
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.servicios-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: map.get(maps.$colores, color-tres);
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    padding: 2rem 3rem; 
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+}
+
+.servicios-item img{
+    width: 270px;
+    height: 270px;
+    border-radius: 10%;
+    border: 6px solid map.get(maps.$colores, color-dos);
+}
+
+.servicios-item-content{
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.servicios-item-title{
+    font-size: 2.8rem;
+    color: map.get(maps.$colores, color-uno);
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .servicios-container{
+        max-width: 400px; 
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .servicios-item{
+        flex-direction: column;
+    }
+    .servicios-item-content{
+        flex-direction: column;
+    }
+
+    .flip{
+        display: flex;
+        flex-direction: column-reverse ; 
+    }
+}
+
+@media (max-width: 480px) {
+    .servicios-main {
+        padding: 4rem 1rem 2rem;
+        width: 100%;
+        max-width: 90%;  
+    }
+
+    .servicios-container {
+        width: 80%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .servicios-item {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flip{
+        display: flex;
+        flex-direction: column-reverse ; 
+    } 
+
+    .servicios-item img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .servicios-item-content {
+        align-items: center;
+    }
+
+    .servicios-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .servicios-item-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "../base/maps";
+
+.container{
+    max-width: 90%; 
+    margin-top: 4rem;
+}
+
+.tarjeta-salon {
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    background: white;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        color: map.get(maps.$colores, color-uno);
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-text {
+        color: #6c757d;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .tarjeta-salon {
+        .card-img-top {
+            height: 180px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tarjeta-salon {
+        .card-img-top {
+            height: 160px;
+        }
+    }
+}

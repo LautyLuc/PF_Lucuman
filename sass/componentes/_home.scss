@@ -36,7 +36,7 @@
       }
 
       img {
-        width: 60%;
+
         height: auto;
         max-width: 200px;
         margin: 0 auto;
@@ -45,5 +45,33 @@
 
   }
 
+  @media (max-width: 768px) {
+    .hero-title{
+        font-size: 2rem;
+    }
+    .hero-sub {
+        font-size: 1rem;
+      }
+    .hero{
+      .logo{
+        width: 30px; 
+      } 
+    }
+  }
 
+  @media (max-width: 480px) {
+    .hero{
+      .logo{
+      width: 20px; 
+    }
+    }
+    .hero-title{
+        font-size: 1.5rem;
+    }
+    .hero-sub {
+        font-size: 1rem;
+      }
+    
+  }
+  
 
