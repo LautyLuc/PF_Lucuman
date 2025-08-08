@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use '../base/variables';
+@use '../base/maps';
+
+@font-face {
+    font-family: "Jost";
+    src: url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: map.get(maps.$colores, color-uno);
+    color: map.get(maps.$colores, color-dos);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a,
+li,
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+p,
+a {
+  color: map.get(maps.$colores, color-);
+  font-family: 'Jost', sans-serif;
+}
+

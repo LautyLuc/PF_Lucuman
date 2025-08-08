@@ -1,0 +1,199 @@
+@use 'sass:map';
+@use '../base/maps';
+
+footer p {
+  color: map.get(maps.$colores, color-tres);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: transparent;
+  z-index: 100;
+  box-sizing: border-box;
+
+  .nav-menu {
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-btn {
+    display: none;
+    z-index: 101;
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+
+    &:hover {
+      background-color: map.get(maps.$colores, color-tres);
+      color: map.get(maps.$colores, color-uno);
+    }
+  }
+}
+
+.logo {
+  width: 80px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: rgb(102, 146, 100);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: map.get(maps.$colores, color-tres);
+  text-decoration: none;
+  font-size: medium;
+}
+
+.footer-copy {
+  color: #1c1c1c;
+  font-size: 0.8rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer-logo {
+  width: 50px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1.5rem;
+    position: relative;
+  }
+
+  header {
+    .menu-btn {
+      display: block;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.603);
+      padding: 6rem 2rem 2rem;
+      transition: right 0.3s ease-in-out;
+      overflow-y: auto;
+      z-index: 100;
+
+      ul {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+    }
+    
+    .menu-toggle:checked ~ .nav-menu {
+      right: 0;
+    }
+
+    .menu-toggle:checked + .menu-btn {
+      background-color: map.get(maps.$colores, color-tres);
+      color: map.get(maps.$colores, color-uno);
+      transform: scale(0.95);
+    }
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    
+    ul{
+      margin-left: -2rem;
+    
+
+  } 
+}
+
+  li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 1rem;
+  }
+
+ 
+}
+
+@media (max-width: 480px) {
+ 
+}

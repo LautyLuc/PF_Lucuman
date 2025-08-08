@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lirio | Eventos</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <img src="img/Untitled-1.png" title="Lirio Logo" alt="Lirio Logo" class="logo" />
-      <nav>
-        <a class="btn" href="index.html" >Inicio</a>
-        <a class="btn" href="pages/nosotros.html" >Nosotros</a>
-        <a class="btn" href="pages/servicios.html" >Servicios</a>
-        <a class="btn" href="pages/contacto.html" >Contacto</a>
-      </nav>
+      <div class="header-container">
+        <img src="img/Untitled-1.png" title="Lirio Logo" alt="Lirio Logo" class="logo" />
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="btn menu-btn">MENU</label>
+        <nav class="nav-menu">
+          <ul>
+            <li><a class="btn" href="index.html">Inicio</a></li>
+            <li><a class="btn" href="pages/nosotros.html">Nosotros</a></li>
+            <li><a class="btn" href="pages/servicios.html">Servicios</a></li>
+            <li><a class="btn" href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section>

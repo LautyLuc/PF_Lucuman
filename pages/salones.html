@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Salones | Lirio Eventos</title>
 </head>
 <body>
     <header>
+      <div class="header-container">
         <img src="../img/Untitled-1.png" title="Lirio Logo" alt="Lirio Logo" class="logo" />
-        <nav>
-          <a class="btn" href="../index.html" >Inicio</a>
-          <a class="btn" href="./nosotros.html" >Nosotros</a>
-          <a class="btn" href="./servicios.html" >Servicios</a>
-          <a class="btn" href="./contacto.html" >Contacto</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="btn menu-btn">MENU</label>
+        <nav class="nav-menu">
+          <ul>
+            <li><a class="btn" href="../index.html">Inicio</a></li>
+            <li><a class="btn" href="nosotros.html">Nosotros</a></li>
+            <li><a class="btn" href="servicios.html">Servicios</a></li>
+            <li><a class="btn" href="contacto.html">Contacto</a></li>
+          </ul>
         </nav>
+      </div>
       </header>
       
       <main class="py-5">
