@@ -173,8 +173,7 @@ footer {
   margin-top: auto;
 }
 footer .footer-container {
-  max-width: 90%;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -328,7 +327,7 @@ footer a:hover {
   }
 }
 .nosotros-main {
-  width: 100%;
+  max-width: 1920px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -345,11 +344,12 @@ footer a:hover {
   background: #e9d3b8;
   border-radius: 32px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-  padding: 6rem 4rem;
+  padding: 4rem 3rem;
+  margin: 0 2rem;
   gap: 3rem;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
-  height: auto;
+  box-sizing: border-box;
 }
 
 .nosotros-img-container {
@@ -395,8 +395,11 @@ footer a:hover {
 
 .nosotros-social {
   display: flex;
-  gap: 12rem;
-  margin-top: 0.5rem;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 1rem;
+  max-width: 400px;
+  width: 100%;
 }
 
 .nosotros-social .social-icon {
@@ -412,12 +415,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-  .nosotros-main {
-    padding: 6rem 2rem 3rem;
-  }
   .nosotros-section {
     flex-direction: column;
-    padding: 2.5rem 2rem;
+    padding: 3rem 2rem;
+    margin: 0 1rem;
     gap: 2.5rem;
     max-width: 100%;
   }
@@ -444,19 +445,16 @@ footer a:hover {
     text-align: center;
   }
   .nosotros-social {
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 1rem;
+    gap: 2rem;
+    max-width: 100%;
   }
 }
 @media (max-width: 480px) {
-  .nosotros-main {
-    margin-top: 1rem;
-    padding: 4rem 1rem 2rem;
-  }
   .nosotros-section {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
+    margin: 0 0.5rem;
     gap: 2rem;
+    border-radius: 24px;
   }
   .nosotros-img {
     width: 200px;
